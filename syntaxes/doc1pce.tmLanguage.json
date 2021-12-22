@@ -1,0 +1,51 @@
+{
+	"scopeName": "source.doc1pce",
+    "patterns": [
+		{
+			"name": "comment.line.doc1pce",
+			"begin": "//",
+			"end": "$"
+        },
+        {
+            "name": "constant.numeric.doc1pce",
+            "match": "\\b(\\d+)\\b"
+        },
+        {
+            "name": "constant.language.doc1pce",
+            "match": "\\b(true|false|zero)\\b"
+        },
+        {
+            "name": "variable.parameter.doc1pce",
+            "match": "\\^(\\d+)"
+        },
+        {
+            "match": "(procedure) (<)([A-Za-z]+[A-Za-z0-9_]*)(>;)",
+			"captures": {
+				"1":{"name":"keyword.other.doc1pce"},
+				"3":{"name":"entity.name.function.doc1pce"}
+			}
+        },
+        {
+            "match": "(<)([A-Za-z]+[A-Za-z0-9_]*)(>)",
+			"captures": {
+				"2":{"name":"variable.other.doc1pce"}
+			}
+        },
+        {
+            "name":"keyword.control.doc1pce",
+            "match": "\\b(begin|call|else|end|exit|if|loop|next|quit|return|then)\\b"
+        },
+        {
+            "name":"keyword.operator.comparison.doc1pce",
+            "match": "\\b(eq|ne|lt|gt|le|ge)\\b"
+        },
+        {
+            "name":"keyword.other.doc1pce",
+            "match": "\\b(afpds|as|at|close|date|declare|delimited|equals|error|file|for|from|input|into|item|items|let|line|on|open|output|pages|procedure|read|string|substring|symbol|time|trace|userexit|value|when|write|wsafp)\\b"
+        },
+        {  "name": "string.quoted.double.doc1pce",
+           "begin": "\"",
+           "end": "\""
+        }
+ ]
+}
