@@ -6,23 +6,43 @@
 			"begin": "//",
 			"end": "$"
         },
+		{
+			"name": "comment.line.doc1pce",
+			"begin": "=COMM",
+			"end": ";;"
+        },
         {
             "name": "constant.numeric.doc1pce",
             "match": "\\b(\\d+)\\b"
         },
         {
             "name": "constant.language.doc1pce",
-            "match": "\\b(true|false|zero)\\b"
+            "match": "\\b(true|false|zero|pageoffset)\\b"
         },
         {
             "name": "variable.parameter.doc1pce",
             "match": "\\^(\\d+)"
         },
         {
+            "match": "\\s(=([ABD-Z][A-Z]|C[A-NP-Z])[A-Z ][A-Z ])\\s.*(;;)",
+			"captures": {
+				"1":{"name":"support.function.doc1pce"},
+				"3":{"name":"support.function.doc1pce"}
+			}
+        },
+        {
             "match": "(procedure) (<)([A-Za-z]+[A-Za-z0-9_]*)(>;)",
 			"captures": {
 				"1":{"name":"keyword.other.doc1pce"},
-				"3":{"name":"entity.name.function.doc1pce"}
+				"3":{"name":"support.function.doc1pce"}
+			}
+        },
+        {
+            "match": "(begin) (procedure) (<)([A-Za-z]+[A-Za-z0-9_]*)(>;)",
+			"captures": {
+				"1":{"name":"keyword.control.doc1pce"},
+				"2":{"name":"storage.type.doc1pce"},
+				"4":{"name":"entity.name.function.doc1pce"}
 			}
         },
         {
@@ -33,19 +53,24 @@
         },
         {
             "name":"keyword.control.doc1pce",
-            "match": "\\b(begin|call|else|end|exit|if|loop|next|quit|return|then)\\b"
-        },
-        {
-            "name":"keyword.operator.comparison.doc1pce",
-            "match": "\\b(eq|ne|lt|gt|le|ge)\\b"
+            "match": "\\b(begin|ce|call|else|end|exit|if|loop|next|quit|return|then)\\b"
         },
         {
             "name":"keyword.other.doc1pce",
-            "match": "\\b(afpds|as|at|close|date|declare|delimited|equals|error|file|for|from|input|into|item|items|let|line|on|open|output|pages|procedure|read|string|substring|symbol|time|trace|userexit|value|when|write|wsafp)\\b"
+            "match": "\\b(eq|ne|lt|gt|le|ge|and|or|not)\\b"
+        },
+        {
+            "name":"keyword.other.doc1pce",
+            "match": "\\b(afpds|as|at|atrim|barcode|close|date|declare|delimited|document|equals|error|extract|file|for|from|in|input|into|item|items|lenght|let|line|merge|of|on|open|output|page|pages|procedure|read|string|substring|symbol|time|to|translate|trace|userexit|value|when|write|wsafp)\\b"
         },
         {  "name": "string.quoted.double.doc1pce",
            "begin": "\"",
-           "end": "\""
+           "end": "\"",
+           "patterns": [
+               {  "match": "[%|@]@<(\\w*)>",
+                  "name":"markup.italic.doc1pce"
+               }
+           ]
         }
  ]
 }
