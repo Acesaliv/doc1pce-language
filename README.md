@@ -6,6 +6,7 @@ Recomended also the "CodeMap" Extension (https://marketplace.visualstudio.com/it
     "codemap.src": [
         {
           "pattern": "begin procedure <\\w+>",
+          "clear": "begin procedure",
           "icon": "function"
         }
     ],
