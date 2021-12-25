@@ -31,7 +31,7 @@
 			}
         },
         {
-            "match": "(procedure) (<)([A-Za-z]+[A-Za-z0-9_]*)(>;)",
+            "match": "(procedure) (<)([A-Za-z]+[A-Za-z0-9_]*)(>( is main)?;)",
 			"captures": {
 				"1":{"name":"keyword.other.doc1pce"},
 				"3":{"name":"support.function.doc1pce"}
