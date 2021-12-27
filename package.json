@@ -5,14 +5,14 @@
     "engines": {
         "vscode": ">=0.9.0-pre.1"
     },
-    "publisher": "orsijsv",
+    "publisher": "Acesaliv",
 	"categories": [
 		"Programming Languages"
 	],
     "contributes": {
         "languages": [{
             "id": "doc1pce",
-            "aliases": ["Doc1pce", "doc1pce"],
+            "aliases": ["Doc1pce", "doc1pce", "pce"],
             "extensions": [".src"],
 			"configuration": "./language-configuration.json"
         }],
