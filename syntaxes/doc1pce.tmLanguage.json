@@ -17,7 +17,7 @@
         },
         {
             "name": "constant.language.doc1pce",
-            "match": "\\b(true|false|zero|pageoffset)\\b"
+            "match": "\\b(true|false|zero|pageoffset|Start|right|once)\\b"
         },
         {
             "name": "variable.parameter.doc1pce",
@@ -53,7 +53,7 @@
         },
         {
             "name":"keyword.control.doc1pce",
-            "match": "\\b(begin|ce|call|else|end|exit|if|loop|next|quit|return|then)\\b"
+            "match": "\\b(begin|ce|call|else|end|exit|if|loop|for|next|quit|return|then)\\b"
         },
         {
             "name":"keyword.other.doc1pce",
@@ -61,7 +61,7 @@
         },
         {
             "name":"keyword.other.doc1pce",
-            "match": "\\b(afpds|as|at|atrim|barcode|close|date|declare|delimited|document|equals|error|extract|file|for|from|in|input|into|item|items|lenght|let|line|merge|of|on|open|output|page|pages|procedure|read|string|substring|symbol|time|to|translate|trace|userexit|value|when|write|wsafp)\\b"
+            "match": "\\b(add|afpds|as|at|atrim|attrib|barcode|close|date|declare|delimited|document|equals|error|extract|file|from|in|input|into|item|items|length|let|line|merge|move|of|on|open|output|overwrite|page|pages|procedure|read|string|substring|symbol|time|to|translate|trace|userexit|value|when|write|wsafp)\\b"
         },
         {  "name": "string.quoted.double.doc1pce",
            "begin": "\"",
